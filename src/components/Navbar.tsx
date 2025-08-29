@@ -42,15 +42,29 @@ const Navbar: React.FC = () => {
   const whatsappNumber = '94764519940';
   const whatsappMessage = encodeURIComponent("I'm interested in your packages");
   const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const baseUrl = (import.meta as any).env?.BASE_URL || '/';
   return <header className={cn('fixed w-full top-0 z-50 transition-all duration-300', isScrolled ? 'bg-black/60 backdrop-blur-sm shadow-md py-3' : 'bg-black/40 backdrop-blur-sm py-6')}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Logo />
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8 text-white">
-          {navLinks.map(link => <Link key={link.path} to={link.path} className={cn('text-sm font-medium relative transition-all duration-300', 'after:content-["""] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0', 'after:bg-accent after:origin-bottom-right after:transition-transform after:duration-300', 'hover:after:scale-x-100 hover:after:origin-bottom-left', location.pathname === link.path ? 'text-white after:scale-x-100' : 'text-white/80 hover:text-white')}>
-              {link.name}
-            </Link>)}
+          {navLinks.map(link => {
+            const isHash = link.path.startsWith('/#');
+            if (isHash) {
+              const hash = link.path.substring(1); // "#section"
+              return (
+                <a key={link.path} href={`${baseUrl}${hash}`} className={cn('text-sm font-medium relative transition-all duration-300', 'after:content-["""] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0', 'after:bg-accent after:origin-bottom-right after:transition-transform after:duration-300', 'hover:after:scale-x-100 hover:after:origin-bottom-left', 'text-white/80 hover:text-white')}>
+                  {link.name}
+                </a>
+              );
+            }
+            return (
+              <Link key={link.path} to={link.path} className={cn('text-sm font-medium relative transition-all duration-300', 'after:content-["""] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0', 'after:bg-accent after:origin-bottom-right after:transition-transform after:duration-300', 'hover:after:scale-x-100 hover:after:origin-bottom-left', location.pathname === link.path ? 'text-white after:scale-x-100' : 'text-white/80 hover:text-white')}>
+                {link.name}
+              </Link>
+            );
+          })}
         </nav>
         
         <div className="hidden md:flex items-center space-x-4">
@@ -81,9 +95,22 @@ const Navbar: React.FC = () => {
         </button>
         
         <nav className="flex flex-col space-y-6 text-white">
-          {navLinks.map(link => <Link key={link.path} to={link.path} className={cn('text-xl font-medium py-2 border-b border-white/20', location.pathname === link.path ? 'text-white' : 'text-white/80')} onClick={() => setIsMenuOpen(false)}>
-              {link.name}
-            </Link>)}
+          {navLinks.map(link => {
+            const isHash = link.path.startsWith('/#');
+            if (isHash) {
+              const hash = link.path.substring(1);
+              return (
+                <a key={link.path} href={`${baseUrl}${hash}`} className={cn('text-xl font-medium py-2 border-b border-white/20', 'text-white/80')} onClick={() => setIsMenuOpen(false)}>
+                  {link.name}
+                </a>
+              );
+            }
+            return (
+              <Link key={link.path} to={link.path} className={cn('text-xl font-medium py-2 border-b border-white/20', location.pathname === link.path ? 'text-white' : 'text-white/80')} onClick={() => setIsMenuOpen(false)}>
+                {link.name}
+              </Link>
+            );
+          })}
           <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="text-xl font-medium py-2 border-b border-white/20 text-white/90 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
             <Phone size={20} className="text-white" />
             WhatsApp: +94 764519940
