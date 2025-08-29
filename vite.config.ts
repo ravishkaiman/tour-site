@@ -19,6 +19,6 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Base will be overridden by GH Actions env if provided
-  base: process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split("/").pop()}/` : "/",
+  // Hard-set base for GitHub Pages project site
+  base: "/tour-site/",
 }));
