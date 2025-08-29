@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sri Lanka Tours — Responsive Template</title>
+  <style>
+    :root{
+      --bg:#f7fafc; --card:#ffffff; --muted:#6b7280; --accent:#0ea5a4; --accent-2:#0b7285; --shadow: 0 8px 20px rgba(11,15,22,0.06);
+      --radius:14px; --maxw:980px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#ffffff);color:#0f172a;display:flex;align-items:center;justify-content:center;padding:28px}
+    .wrap{width:100%;max-width:var(--maxw)}
+    .tour-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:20px}
+    .hero{display:flex;flex-direction:row;gap:22px;padding:22px}
+    .hero .left{flex:1}
+    .hero h1{margin:0;font-size:20px;line-height:1.15}
+    .meta{color:var(--muted);font-size:13px;margin-top:6px}
+    .badge{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;padding:6px 10px;border-radius:999px;font-weight:600;font-size:12px}
+    .pill-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .pill{background:#eefaf9;color:var(--accent-2);padding:6px 10px;border-radius:999px;font-size:13px}
+    .right{width:260px;flex:0 0 260px}
+    .right img{width:100%;height:140px;object-fit:cover;border-radius:10px}
+    .content{padding:20px 22px;border-top:1px dashed #eef2f7}
+    .section{display:flex;gap:18px;align-items:flex-start;margin-bottom:16px}
+    .section h3{margin:0 0 8px 0;font-size:15px}
+    .highlights{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .hl-item{background:#fafafa;border-radius:10px;padding:10px;font-size:14px;color:#0b1723}
+    .itinerary{margin-top:8px}
+    .day{background:linear-gradient(180deg,#ffffff,#fbfdff);border-radius:10px;padding:12px;margin-bottom:10px}
+    .day .time{font-weight:700;color:var(--accent-2);font-size:13px}
+    ul{margin:8px 0 0 18px}
+    .features{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+    .feature{background:#fff7ed;padding:8px 10px;border-radius:10px;font-size:13px}
+    .cta{display:flex;gap:12px;align-items:center;margin-top:14px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+    .ghost{background:#eef2f7;color:var(--accent-2);padding:10px 14px;border-radius:10px;border:none;cursor:pointer}
+    .footer{padding:16px 22px;background:#fbfcff;border-top:1px solid #eef2f7;text-align:right;font-size:13px;color:var(--muted)}
+
+    @media (max-width:860px){
+      .hero{flex-direction:column}
+      .right{width:100%}
+      .highlights{grid-template-columns:1fr}
+    }
+
+    .grid{display:grid;grid-template-columns:repeat(1,1fr);gap:18px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="grid">
+
+      <!-- TOUR CARD #1 (3 Days) -->
+      <article class="tour-card" id="tour-1">
+        <div class="hero">
+          <div class="left">
+            <div style="display:flex;align-items:center;gap:12px">
+              <span class="badge">Summer (May–Nov)</span>
+              <h1>Summer in Sri Lanka — 3 Day Short Tour</h1>
+            </div>
+            <div class="meta">Quick, seasonal getaway covering culture, wildlife, hill country & marine life — ideal for a 3-day escape.</div>
+            <div class="pill-list">
+              <span class="pill">Sigiriya</span><span class="pill">Dambulla</span><span class="pill">Minneriya Safari</span><span class="pill">Trincomalee</span><span class="pill">Kandy</span><span class="pill">Nuwara Eliya</span>
+            </div>
+            <div class="content">
+              <div class="section">
+                <h3>Tour Overview</h3>
+                <p>Experience the essence of Sri Lanka in just three unforgettable days. Climb Sigiriya Rock Fortress, discover Dambulla Cave Temple, enjoy a Minneriya safari, go whale & dolphin watching in Trincomalee, take the scenic train to Nuwara Eliya, visit tea plantations and waterfalls, and finish in Colombo or Negombo.</p>
+              </div>
+              <div class="section">
+                <h3>Tour Highlights</h3>
+                <div class="highlights">
+                  <div class="hl-item">Climb the Majestic Sigiriya Rock Fortress</div>
+                  <div class="hl-item">Discover the Sacred Dambulla Cave Temple</div>
+                  <div class="hl-item">Exciting Minneriya Safari</div>
+                  <div class="hl-item">Hill country tea experience & train</div>
+                  <div class="hl-item">Whale & dolphin watching at Trincomalee</div>
+                  <div class="hl-item">Waterfalls: Devon & St. Clair's</div>
+                </div>
+              </div>
+              <div class="section itinerary">
+                <h3>Itinerary (3 Days)</h3>
+                <div class="day"><div class="time">Day 01</div><ul><li>Colombo/Negombo → Dambulla Cave Temple → Sigiriya climb</li><li>Village lunch & Minneriya Safari</li><li>Overnight Trincomalee</li></ul></div>
+                <div class="day"><div class="time">Day 02</div><ul><li>Whale & dolphin watching</li><li>Nilaveli, Trinco city sites</li><li>Spice Garden & Kandy Temple of Tooth</li><li>Overnight Kandy</li></ul></div>
+                <div class="day"><div class="time">Day 03</div><ul><li>Train Kandy → Nuwara Eliya</li><li>City tour, Tea estate visit</li><li>Stops at Devon & St. Clair's Falls</li><li>Return to Colombo/Negombo</li></ul></div>
+              </div>
+              <div class="section">
+                <h3>Inclusions</h3>
+                <div class="features">
+                  <div class="feature">Airport pick-up & drop-off</div><div class="feature">Hotel pick-up & drop-off</div><div class="feature">Driver/guide</div><div class="feature">A/C vehicle + Wi‑Fi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <img src="https://images.unsplash.com/photo-1506976785307-8732e854ad5a?q=80&w=800" alt="Sigiriya"/>
+          </div>
+        </div>
+        <div class="footer">Card 1 of 5 — 3-Day Tour</div>
+      </article>
+
+      <!-- TOUR CARD #2 (5 Days) -->
+      <article class="tour-card" id="tour-2">
+        <div class="hero">
+          <div class="left">
+            <div style="display:flex;align-items:center;gap:12px">
+              <span class="badge">Year-Round</span>
+              <h1>Discover Sri Lanka — 5 Day Tour</h1>
+            </div>
+            <div class="meta">Cultural wonders, safaris, train ride, Kandy, beaches — perfect 5-day experience of Sri Lanka.</div>
+            <div class="pill-list">
+              <span class="pill">Sigiriya</span><span class="pill">Dambulla</span><span class="pill">Minneriya</span><span class="pill">Kandy</span><span class="pill">Tea Country</span><span class="pill">Bentota</span>
+            </div>
+            <div class="content">
+              <div class="section">
+                <h3>Tour Overview</h3>
+                <p>Discover the essence of Sri Lanka in five days. Explore Sigiriya, experience safaris at Minneriya and Yala, ride the scenic train through tea country, immerse in Kandy’s culture, and relax at Bentota’s golden beaches.</p>
+              </div>
+              <div class="section">
+                <h3>Tour Highlights</h3>
+                <div class="highlights">
+                  <div class="hl-item">Climb Sigiriya Rock Fortress</div>
+                  <div class="hl-item">Minneriya & Yala Safaris</div>
+                  <div class="hl-item">Temple of the Tooth, Kandy</div>
+                  <div class="hl-item">Tea plantation & scenic train</div>
+                  <div class="hl-item">Relax on Bentota beach</div>
+                  <div class="hl-item">Sri Lankan cooking demo</div>
+                </div>
+              </div>
+              <div class="section itinerary">
+                <h3>Itinerary (5 Days)</h3>
+                <div class="day"><div class="time">Day 01</div><ul><li>Arrival Colombo → Dambulla Cave Temple</li><li>Local village lunch</li><li>Cultural show</li><li>Overnight Sigiriya</li></ul></div>
+                <div class="day"><div class="time">Day 02</div><ul><li>Minneriya Safari</li><li>Climb Sigiriya Fortress</li><li>Spice Garden & Cooking Demo</li><li>Overnight Kandy</li></ul></div>
+                <div class="day"><div class="time">Day 03</div><ul><li>Train Kandy → Nuwara Eliya</li><li>Gregory Lake, Victoria Park</li><li>Ramboda Falls, Tea estates</li><li>Temple of the Tooth</li><li>Overnight Kandy</li></ul></div>
+                <div class="day"><div class="time">Day 04</div><ul><li>Kandy city, Peradeniya Gardens</li><li>Travel to Bentota</li><li>Relax or Madu River boat ride</li><li>Overnight Bentota</li></ul></div>
+                <div class="day"><div class="time">Day 05</div><ul><li>Beach leisure</li><li>Transfer to Colombo Airport</li></ul></div>
+              </div>
+              <div class="section">
+                <h3>Inclusions</h3>
+                <div class="features">
+                  <div class="feature">Airport pick-up & drop-off</div><div class="feature">Hotel pick-up & drop-off</div><div class="feature">Driver/guide</div><div class="feature">A/C vehicle + Wi‑Fi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <img src="https://images.unsplash.com/photo-1524492449090-1a065f2de1d4?q=80&w=800" alt="Tea plantations"/>
+          </div>
+        </div>
+        <div class="footer">Card 2 of 5 — 5-Day Tour</div>
+      </article>
+
+    </div>
+  </div>
+</body>
+</html>
