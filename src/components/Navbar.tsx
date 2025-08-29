@@ -33,11 +33,11 @@ const Navbar: React.FC = () => {
     name: 'About',
     path: '/about'
   }, {
-    name: 'Accommodation',
-    path: '/accommodation'
+    name: 'Day Tours',
+    path: '/#day-tours'
   }, {
-    name: 'Activities',
-    path: '/activities'
+    name: 'Round Tours',
+    path: '/#round-tours'
   }];
   const whatsappNumber = '94764519940';
   const whatsappMessage = encodeURIComponent("I'm interested in your packages");

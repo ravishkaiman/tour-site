@@ -57,7 +57,9 @@ const Index: React.FC = () => {
       <main className="flex-grow">
         <Hero />
         {/* Day Tour Packages */}
-        <DiscountOffers />
+        <section id="day-tours">
+          <DiscountOffers />
+        </section>
         
         {/* Round Tours */}
         <section id="round-tours" className="py-20 bg-secondary">
